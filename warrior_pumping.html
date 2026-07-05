@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warrior Pumping | Septic & Grease Trap Service | Moundville, AL</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #17181a;
+  --navy-mid: #1f2124;
+  --navy-light: #2a2d31;
+  --blue: #a3131c;
+  --blue-bright: #c41824;
+  --sky: #f5e7e8;
+  --orange: #d97706;
+  --orange-light: #fff3e0;
+  --gray-light: #f5f5f4;
+  --gray-mid: #5f6165;
+  --border: #e0e0dd;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+body { font-family: var(--font); background: #fff; color: var(--navy); }
+
+svg.icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+/* NAV */
+.wp-nav {
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem; height: 68px; position: sticky; top: 0; z-index: 100;
+}
+.wp-logo { display: flex; align-items: center; gap: 14px; }
+.wp-logo-badge {
+  width: 46px; height: 46px; border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  background: #fff;
+}
+.wp-logo-badge img { width: 100%; height: 100%; object-fit: contain; }
+.wp-logo-text { color: #fff; font-size: 17px; font-weight: 600; }
+.wp-logo-text span { color: #e8888e; }
+.wp-logo-sub { color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+
+.wp-nav-dropdown-wrapper { position: relative; display: inline-block; }
+.wp-nav-cta-trigger {
+  background: var(--orange); color: #fff; border: none;
+  padding: 10px 20px; border-radius: 6px; font-size: 14px;
+  font-weight: 500; cursor: pointer;
+  display: flex; align-items: center; gap: 6px; font-family: var(--font);
+}
+.wp-nav-cta-trigger:hover { background: #8a0f16; }
+.wp-dropdown-menu {
+  display: none; position: absolute; right: 0; top: calc(100% + 8px);
+  background: #fff; min-width: 210px; border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid var(--border);
+  overflow: hidden; z-index: 110;
+}
+.wp-dropdown-menu.show { display: block; }
+.wp-dropdown-menu a, .wp-dropdown-menu button {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  padding: 12px 16px; color: var(--navy); text-decoration: none;
+  font-size: 14px; font-weight: 500; background: transparent; border: none;
+  text-align: left; cursor: pointer; border-bottom: 1px solid var(--gray-light);
+  font-family: var(--font);
+}
+.wp-dropdown-menu a:last-child, .wp-dropdown-menu button:last-child { border-bottom: none; }
+.wp-dropdown-menu a:hover, .wp-dropdown-menu button:hover { background: var(--gray-light); }
+.wp-dropdown-menu .wp-dropdown-phone { background: var(--orange-light); color: var(--orange); }
+.wp-dropdown-menu .wp-dropdown-phone:hover { background: #ffe0b2; }
+
+/* HERO */
+.wp-hero {
+  background:
+    linear-gradient(135deg, rgba(23,24,26,0.92) 0%, rgba(31,33,36,0.88) 50%, rgba(23,24,26,0.94) 100%),
+    url('Warrior_pumping_background.jpg') center center / cover no-repeat;
+  padding: 76px 2rem 68px; text-align: center; position: relative; overflow: hidden;
+}
+.wp-hero-bg-icon {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  opacity: 0.05; pointer-events: none; color: var(--blue-bright);
+}
+.wp-hero-eyebrow {
+  display: inline-block;
+  background: rgba(196,24,36,0.25); color: #f5a3a3;
+  font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; margin-bottom: 24px;
+}
+.wp-hero h1 {
+  color: #fff; font-size: 48px; font-weight: 700;
+  line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 8px;
+}
+.wp-hero h1 em { color: #e8888e; font-style: normal; }
+.wp-hero-sub-head {
+  color: #fff; font-size: 26px; font-weight: 300; margin-bottom: 20px;
+  letter-spacing: -0.5px; opacity: 0.85;
+}
+.wp-hero p {
+  color: rgba(255,255,255,0.65); font-size: 17px; line-height: 1.7;
+  max-width: 500px; margin: 0 auto 36px;
+}
+.wp-hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.wp-btn-primary {
+  background: var(--orange); color: #fff; border: none;
+  padding: 14px 28px; border-radius: 8px; font-size: 15px;
+  font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;
+  text-decoration: none; font-family: var(--font);
+}
+.wp-btn-primary:hover { background: #8a0f16; }
+.wp-btn-secondary {
+  background: transparent; color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  padding: 14px 28px; border-radius: 8px; font-size: 15px;
+  font-weight: 500; cursor: pointer; font-family: var(--font);
+}
+.wp-btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
+.wp-hero-stats {
+  display: flex; justify-content: center;
+  margin-top: 56px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 40px;
+  position: relative; z-index: 1;
+}
+.wp-stat { padding: 0 44px; border-right: 1px solid rgba(255,255,255,0.08); }
+.wp-stat:last-child { border-right: none; }
+.wp-stat-num { color: #fff; font-size: 32px; font-weight: 700; }
+.wp-stat-num span { color: #e8888e; }
+.wp-stat-label { color: rgba(255,255,255,0.45); font-size: 13px; margin-top: 4px; }
+.wp-hero-wave {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--blue) 0%, #e8888e 50%, var(--blue) 100%);
+}
+
+/* BADGE BAR */
+.wp-badges {
+  background: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px; padding: 14px 2rem; flex-wrap: wrap;
+}
+.wp-badge { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 13px; font-weight: 500; }
+
+/* SECTIONS */
+.wp-section { padding: 72px 2rem; }
+.wp-section-label {
+  color: var(--blue); font-size: 12px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;
+}
+.wp-section h2 {
+  font-size: 34px; font-weight: 700; color: var(--navy);
+  letter-spacing: -0.5px; margin-bottom: 12px;
+}
+.wp-section-sub { color: var(--gray-mid); font-size: 16px; margin-bottom: 48px; max-width: 480px; }
+
+/* SERVICES */
+.wp-services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+}
+.wp-service-card {
+  border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px;
+  cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.wp-service-card:hover {
+  border-color: var(--blue); box-shadow: 0 4px 20px rgba(21,101,192,0.1);
+  transform: translateY(-2px);
+}
+.wp-service-icon {
+  width: 46px; height: 46px; background: var(--sky);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; color: var(--blue);
+}
+.wp-service-card h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.wp-service-card p { font-size: 13px; color: var(--gray-mid); line-height: 1.6; margin-bottom: 14px; }
+.wp-service-link { color: var(--blue); font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+
+/* CREDENTIALS */
+.wp-creds { background: var(--gray-light); padding: 72px 2rem; }
+.wp-creds-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 900px; margin: 0 auto; }
+.wp-creds-list { list-style: none; display: flex; flex-direction: column; gap: 20px; margin-top: 36px; }
+.wp-creds-item { display: flex; align-items: flex-start; gap: 14px; }
+.wp-creds-dot {
+  width: 28px; height: 28px; min-width: 28px; background: var(--blue); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: #fff; margin-top: 1px;
+}
+.wp-creds-item h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.wp-creds-item p { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
+.wp-badge-visual { background: var(--navy); border-radius: 16px; padding: 36px; text-align: center; }
+.wp-badge-circle {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--blue); margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  border: 4px solid rgba(255,255,255,0.12); color: #fff;
+}
+.wp-badge-label { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.wp-badge-sub { color: rgba(255,255,255,0.45); font-size: 13px; }
+.wp-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 24px 0; }
+.wp-cred-row { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.wp-cred-key { color: rgba(255,255,255,0.45); font-size: 13px; }
+.wp-cred-val { color: #fff; font-size: 13px; font-weight: 600; }
+
+/* REVIEWS */
+.wp-reviews { padding: 72px 2rem; }
+.wp-reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.wp-review-card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.wp-review-stars { color: #f59e0b; font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+.wp-review-text { font-size: 14px; color: var(--gray-mid); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+.wp-review-author { font-size: 13px; font-weight: 600; color: var(--navy); }
+
+/* CONTACT */
+.wp-contact { background: var(--navy-mid); padding: 72px 2rem; }
+.wp-contact .wp-section-label { color: #f5a3a3; }
+.wp-contact h2 { color: #fff; font-size: 34px; font-weight: 700; margin-bottom: 12px; }
+.wp-contact-desc { color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 40px; }
+.wp-contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 860px; margin: 0 auto; }
+.wp-contact-info { display: flex; flex-direction: column; gap: 16px; }
+.wp-contact-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px; padding: 20px;
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.wp-contact-icon { color: #e8888e; margin-top: 2px; flex-shrink: 0; }
+.wp-contact-card h4 { color: #fff; font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.wp-contact-card p { color: rgba(255,255,255,0.45); font-size: 13px; }
+.wp-contact-card a { color: #fff; text-decoration: none; font-weight: 600; }
+
+/* FORM */
+.wp-form { display: flex; flex-direction: column; gap: 14px; }
+.wp-form input, .wp-form textarea, .wp-form select {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 8px; padding: 12px 14px; color: #fff; font-size: 14px;
+  font-family: var(--font); width: 100%; outline: none;
+}
+.wp-form input::placeholder, .wp-form textarea::placeholder { color: rgba(255,255,255,0.28); }
+.wp-form input:focus, .wp-form textarea:focus, .wp-form select:focus { border-color: #e8888e; }
+.wp-form select { color: rgba(255,255,255,0.45); }
+.wp-form select option { background: var(--navy-mid); color: #fff; }
+.wp-form textarea { resize: vertical; min-height: 100px; }
+.wp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.wp-submit {
+  background: var(--orange); color: #fff; border: none;
+  padding: 14px; border-radius: 8px; font-size: 15px;
+  font-weight: 600; cursor: pointer; width: 100%; font-family: var(--font);
+}
+.wp-submit:hover { background: #8a0f16; }
+.wp-form-success {
+  display: none; background: rgba(74,222,128,0.1);
+  border: 1px solid rgba(74,222,128,0.3);
+  border-radius: 8px; padding: 16px; color: #4ade80;
+  font-size: 14px; text-align: center;
+}
+
+/* FOOTER */
+.wp-footer {
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 2rem; flex-wrap: wrap; gap: 12px;
+}
+.wp-footer-text { color: rgba(255,255,255,0.28); font-size: 13px; }
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .wp-hero h1 { font-size: 32px; }
+  .wp-hero-sub-head { font-size: 20px; }
+  .wp-hero-stats { flex-direction: column; gap: 24px; }
+  .wp-stat { border-right: none; padding: 0; }
+  .wp-creds-inner, .wp-contact-inner { grid-template-columns: 1fr; }
+  .wp-form-row { grid-template-columns: 1fr; }
+  .wp-badges { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── INLINE SVG ICON SPRITES ── -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="ico-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+  <symbol id="ico-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="ico-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+  <symbol id="ico-cert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+  <symbol id="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="ico-tank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="3"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></symbol>
+  <symbol id="ico-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4 5 7 8.5 7 12.5A7 7 0 0 1 5 14.5C5 10.5 8 7 12 2z"/></symbol>
+  <symbol id="ico-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></symbol>
+  <symbol id="ico-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="ico-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="ico-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></symbol>
+  <symbol id="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="ico-mappin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="ico-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="ico-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="ico-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+  <symbol id="ico-circle-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+</svg>
+
+<nav class="wp-nav">
+  <div class="wp-logo">
+    <div class="wp-logo-badge">
+      <img src="Warrior_pumping_logo.png" alt="Warrior Pumping Logo">
+    </div>
+    <div>
+      <div class="wp-logo-text"><span>Warrior</span> Pumping</div>
+      <div class="wp-logo-sub">Moundville, AL · Licensed & Insured</div>
+    </div>
+  </div>
+  <div class="wp-nav-dropdown-wrapper">
+    <button class="wp-nav-cta-trigger" onclick="toggleDropdown(event)">
+      Menu & Contact
+      <svg class="icon" width="16" height="16"><use href="#ico-chevron"/></svg>
+    </button>
+    <div class="wp-dropdown-menu" id="wpNavDropdown">
+      <a href="tel:2053718786" class="wp-dropdown-phone">
+        <svg class="icon" width="16" height="16"><use href="#ico-phone"/></svg> Call Now
+      </a>
+      <button onclick="scrollToSection('services')">
+        <svg class="icon" width="16" height="16"><use href="#ico-tank"/></svg> Services
+      </button>
+      <button onclick="scrollToSection('credentials')">
+        <svg class="icon" width="16" height="16"><use href="#ico-cert"/></svg> About
+      </button>
+      <button onclick="scrollToSection('contact')">
+        <svg class="icon" width="16" height="16"><use href="#ico-mail"/></svg> Contact
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section class="wp-hero">
+  <div class="wp-hero-bg-icon">
+    <svg width="400" height="400"><use href="#ico-tank"/></svg>
+  </div>
+  <div class="wp-hero-eyebrow">Serving West Alabama · Se Habla Español</div>
+  <h1>Septic problems?<br><em>We've got you covered.</em></h1>
+  <div class="wp-hero-sub-head">Septic & grease trap pumping, done right.</div>
+  <p>Warrior Pumping is your trusted local provider for septic tank and grease trap pumping and installation across West Alabama. Contact us today for a free estimate!</p>
+  <div class="wp-hero-btns">
+    <a href="tel:2053718786" class="wp-btn-primary">
+      <svg class="icon" width="18" height="18"><use href="#ico-phone"/></svg> Call for a Free Estimate
+    </a>
+    <button class="wp-btn-secondary" onclick="scrollToSection('services')">See what we do</button>
+  </div>
+  <div class="wp-hero-stats">
+    <div class="wp-stat">
+      <div class="wp-stat-num">100<span>%</span></div>
+      <div class="wp-stat-label">Recommended by customers</div>
+    </div>
+    <div class="wp-stat">
+      <div class="wp-stat-num">8<span>+</span></div>
+      <div class="wp-stat-label">West Alabama counties served</div>
+    </div>
+    <div class="wp-stat">
+      <div class="wp-stat-num">Free</div>
+      <div class="wp-stat-label">Estimates on every job</div>
+    </div>
+  </div>
+  <div class="wp-hero-wave"></div>
+</section>
+
+<div class="wp-badges">
+  <div class="wp-badge"><svg class="icon" width="16" height="16"><use href="#ico-tank"/></svg> Septic Pumping</div>
+  <div class="wp-badge"><svg class="icon" width="16" height="16"><use href="#ico-droplet"/></svg> Grease Trap Pumping</div>
+  <div class="wp-badge"><svg class="icon" width="16" height="16"><use href="#ico-wrench"/></svg> Installation & Repair</div>
+  <div class="wp-badge"><svg class="icon" width="16" height="16"><use href="#ico-clock"/></svg> Free Estimates</div>
+</div>
+
+<section class="wp-section" id="services">
+  <div class="wp-section-label">What we do</div>
+  <h2>Full-service septic & grease trap care</h2>
+  <p class="wp-section-sub">From routine pumping to full installations — honest work, fair prices.</p>
+  <div class="wp-services-grid">
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-tank"/></svg></div>
+      <h3>Septic tank pumping</h3>
+      <p>We open both sides of the tank and clean it thoroughly — no shortcuts, no half-measures.</p>
+      <div class="wp-service-link">Get help <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-droplet"/></svg></div>
+      <h3>Grease trap pumping</h3>
+      <p>Keep your restaurant or commercial kitchen compliant with regular, reliable grease trap service.</p>
+      <div class="wp-service-link">Get a quote <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-wrench"/></svg></div>
+      <h3>Septic system installation</h3>
+      <p>New septic system installed correctly from the start, sized right for your home or property.</p>
+      <div class="wp-service-link">Get a quote <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-search"/></svg></div>
+      <h3>Inspections</h3>
+      <p>Buying a home or just want peace of mind? We'll inspect your system and give you a straight answer.</p>
+      <div class="wp-service-link">Schedule now <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-truck"/></svg></div>
+      <h3>Repairs & maintenance</h3>
+      <p>Damaged lids, cracked tanks, or a system that's not draining right — we diagnose and fix it.</p>
+      <div class="wp-service-link">Get help <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+    <div class="wp-service-card" onclick="scrollToSection('contact')">
+      <div class="wp-service-icon"><svg class="icon" width="22" height="22"><use href="#ico-calendar"/></svg></div>
+      <h3>Routine maintenance plans</h3>
+      <p>Scheduled pumping on your timeline helps you avoid backups, odors, and costly emergency repairs.</p>
+      <div class="wp-service-link">Learn more <svg class="icon" width="14" height="14"><use href="#ico-arrow"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<div class="wp-creds" id="credentials">
+  <div class="wp-creds-inner">
+    <div>
+      <div class="wp-section-label">Why Warrior Pumping</div>
+      <h2 style="font-size:30px; font-weight:700; color:var(--navy); letter-spacing:-0.5px;">Trusted, thorough, and fair.</h2>
+      <ul class="wp-creds-list">
+        <li class="wp-creds-item">
+          <div class="wp-creds-dot"><svg class="icon" width="14" height="14"><use href="#ico-check"/></svg></div>
+          <div>
+            <h4>100% customer recommendation</h4>
+            <p>Every customer who's reviewed us has recommended our work — a track record we work hard to protect.</p>
+          </div>
+        </li>
+        <li class="wp-creds-item">
+          <div class="wp-creds-dot"><svg class="icon" width="14" height="14"><use href="#ico-check"/></svg></div>
+          <div>
+            <h4>Thorough, every time</h4>
+            <p>We open both sides of the tank and clean it completely — no half-measures, no cutting corners.</p>
+          </div>
+        </li>
+        <li class="wp-creds-item">
+          <div class="wp-creds-dot"><svg class="icon" width="14" height="14"><use href="#ico-check"/></svg></div>
+          <div>
+            <h4>Honest advice, fair pricing</h4>
+            <p>You'll get a clear estimate up front and straight answers about what your system actually needs.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="wp-badge-visual">
+      <div class="wp-badge-circle">
+        <svg class="icon" width="52" height="52" style="color:#fff"><use href="#ico-tank"/></svg>
+      </div>
+      <div class="wp-badge-label">Warrior Pumping</div>
+      <div class="wp-badge-sub">Licensed & Insured · Moundville, AL</div>
+      <hr class="wp-divider">
+      <div class="wp-cred-row"><span class="wp-cred-key">Service area</span><span class="wp-cred-val">West Alabama</span></div>
+      <div class="wp-cred-row"><span class="wp-cred-key">Residential</span><span class="wp-cred-val">Yes</span></div>
+      <div class="wp-cred-row"><span class="wp-cred-key">Commercial</span><span class="wp-cred-val">Yes</span></div>
+      <div class="wp-cred-row"><span class="wp-cred-key">Se Habla Español</span><span class="wp-cred-val" style="color:#4ade80;">Sí</span></div>
+      <div class="wp-cred-row"><span class="wp-cred-key">Free estimates</span><span class="wp-cred-val" style="color:#4ade80;">Available</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="wp-reviews" id="reviews">
+  <div class="wp-section-label">What customers say</div>
+  <h2>Good work speaks for itself</h2>
+  <p class="wp-section-sub">Real feedback from real West Alabama customers.</p>
+  <div class="wp-reviews-grid">
+    <div class="wp-review-card">
+      <div class="wp-review-stars">★★★★★</div>
+      <p class="wp-review-text">"They responded to my call right away and took care of pumping both my septic tank and my neighbor's. Walked me through everything and even showed me the tanks once they were done — really puts you at ease."</p>
+      <div class="wp-review-author">— Tuscaloosa County homeowner</div>
+    </div>
+    <div class="wp-review-card">
+      <div class="wp-review-stars">★★★★★</div>
+      <p class="wp-review-text">"Honest about what needed to be done, gave us tips on keeping the system working properly going forward, and the price was very fair. Highly recommend."</p>
+      <div class="wp-review-author">— Moundville customer</div>
+    </div>
+    <div class="wp-review-card">
+      <div class="wp-review-stars">★★★★★</div>
+      <p class="wp-review-text">"Called them back quickly, showed up on time, and cleaned up completely when the job was done — didn't leave a mess anywhere. Exactly what you want from a septic company."</p>
+      <div class="wp-review-author">— Local repeat customer</div>
+    </div>
+  </div>
+</section>
+
+<section class="wp-contact" id="contact">
+  <div style="max-width:860px; margin:0 auto;">
+    <div class="wp-section-label">Get in touch</div>
+    <h2>Ready when you need us</h2>
+    <p class="wp-contact-desc">Septic backing up? Grease trap overdue? Give us a call for a free estimate.</p>
+    <div class="wp-contact-inner">
+      <div class="wp-contact-info">
+        <div class="wp-contact-card">
+          <div class="wp-contact-icon"><svg class="icon" width="22" height="22"><use href="#ico-phone"/></svg></div>
+          <div>
+            <h4>Call or text</h4>
+            <p><a href="tel:2053718786">(205) 371-8786</a></p>
+          </div>
+        </div>
+        <div class="wp-contact-card">
+          <div class="wp-contact-icon"><svg class="icon" width="22" height="22"><use href="#ico-mappin"/></svg></div>
+          <div>
+            <h4>Address</h4>
+            <p>1425 County Road 50, Moundville, AL 35474</p>
+          </div>
+        </div>
+        <div class="wp-contact-card">
+          <div class="wp-contact-icon"><svg class="icon" width="22" height="22"><use href="#ico-clock"/></svg></div>
+          <div>
+            <h4>Service area</h4>
+            <p>Marion, Greensboro, Demopolis, Brent, Vance, Tuscaloosa, Moundville & Livingston, AL</p>
+          </div>
+        </div>
+        <div class="wp-contact-card">
+          <div class="wp-contact-icon"><svg class="icon" width="22" height="22"><use href="#ico-facebook"/></svg></div>
+          <div>
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/WarriorPumping/" target="_blank">Warrior Pumping</a></p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="wp-form">
+          <div class="wp-form-row">
+            <input type="text" placeholder="Your name" id="f-name" />
+            <input type="tel" placeholder="Phone number" id="f-phone" />
+          </div>
+          <select id="f-service">
+            <option value="" disabled selected>What do you need help with?</option>
+            <option>Septic tank pumping</option>
+            <option>Grease trap pumping</option>
+            <option>Septic system installation</option>
+            <option>Inspection</option>
+            <option>Repairs & maintenance</option>
+            <option>Other</option>
+          </select>
+          <textarea placeholder="Tell us about the job..." id="f-msg"></textarea>
+          <button class="wp-submit" onclick="submitForm()">Send message</button>
+          <div class="wp-form-success" id="wp-success">
+            <svg class="icon" width="22" height="22" style="display:block;margin:0 auto 6px"><use href="#ico-circle-check"/></svg>
+            Message sent! We'll be in touch shortly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wp-footer">
+  <span class="wp-footer-text">© 2025 Warrior Pumping, LLC · Moundville, AL</span>
+  <span class="wp-footer-text">Licensed & Insured · Se Habla Español</span>
+</footer>
+
+<script>
+function toggleDropdown(event) {
+  event.stopPropagation();
+  document.getElementById('wpNavDropdown').classList.toggle('show');
+}
+window.onclick = function(event) {
+  if (!event.target.closest('.wp-nav-dropdown-wrapper')) {
+    const dropdown = document.getElementById('wpNavDropdown');
+    if (dropdown && dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
+}
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const service = document.getElementById('f-service').value;
+  if (!name || !phone || !service) {
+    alert('Please fill in your name, phone number, and service type.');
+    return;
+  }
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-phone').value = '';
+  document.getElementById('f-service').value = '';
+  document.getElementById('f-msg').value = '';
+  document.getElementById('wp-success').style.display = 'block';
+  setTimeout(() => { document.getElementById('wp-success').style.display = 'none'; }, 5000);
+}
+</script>
+</body>
+</html>
